@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		5B52D9B21C7196BE005D8139 /* TaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B52D9B11C7196BE005D8139 /* TaskCell.swift */; };
 		5B52D9B41C719F85005D8139 /* TaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B52D9B31C719F85005D8139 /* TaskModel.swift */; };
+		5B633FB01C72EB710075419F /* TaskDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B633FAF1C72EB710075419F /* TaskDetailViewController.swift */; };
 		5BF9A29E1C718DAA0015D75F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF9A29D1C718DAA0015D75F /* AppDelegate.swift */; };
 		5BF9A2A01C718DAA0015D75F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF9A29F1C718DAA0015D75F /* ViewController.swift */; };
 		5BF9A2A31C718DAA0015D75F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BF9A2A11C718DAA0015D75F /* Main.storyboard */; };
@@ -38,6 +39,7 @@
 /* Begin PBXFileReference section */
 		5B52D9B11C7196BE005D8139 /* TaskCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskCell.swift; sourceTree = "<group>"; };
 		5B52D9B31C719F85005D8139 /* TaskModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskModel.swift; sourceTree = "<group>"; };
+		5B633FAF1C72EB710075419F /* TaskDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskDetailViewController.swift; sourceTree = "<group>"; };
 		5BF9A29A1C718DAA0015D75F /* TaskIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaskIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BF9A29D1C718DAA0015D75F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5BF9A29F1C718DAA0015D75F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 			children = (
 				5BF9A29D1C718DAA0015D75F /* AppDelegate.swift */,
 				5BF9A29F1C718DAA0015D75F /* ViewController.swift */,
+				5B633FAF1C72EB710075419F /* TaskDetailViewController.swift */,
 				5B52D9B31C719F85005D8139 /* TaskModel.swift */,
 				5B52D9B11C7196BE005D8139 /* TaskCell.swift */,
 				5BF9A2A11C718DAA0015D75F /* Main.storyboard */,
@@ -266,6 +269,7 @@
 				5B52D9B21C7196BE005D8139 /* TaskCell.swift in Sources */,
 				5B52D9B41C719F85005D8139 /* TaskModel.swift in Sources */,
 				5BF9A29E1C718DAA0015D75F /* AppDelegate.swift in Sources */,
+				5B633FB01C72EB710075419F /* TaskDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

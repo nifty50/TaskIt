@@ -67,11 +67,48 @@
                     <navigationItem key="navigationItem" id="DSs-mc-bME"/>
                     <connections>
                         <outlet property="tableView" destination="hnx-cd-5v1" id="5M0-eN-WPg"/>
+                        <segue destination="Dst-jP-t60" kind="show" identifier="showTaskDetail" id="uAv-uA-Gxq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1559" y="635"/>
+        </scene>
+        <!--Task Detail View Controller-->
+        <scene sceneID="esO-Hl-0IP">
+            <objects>
+                <viewController id="Dst-jP-t60" customClass="TaskDetailViewController" customModule="TaskIt" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="G2K-Xz-dHl"/>
+                        <viewControllerLayoutGuide type="bottom" id="zo5-wh-0JA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hXq-h9-dWa">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Task" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="N69-FC-mlr">
+                                <rect key="frame" x="20" y="72" width="280" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Subtask" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PXA-t3-FyI">
+                                <rect key="frame" x="20" y="110" width="280" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="qds-rN-pun">
+                                <rect key="frame" x="20" y="148" width="320" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="477293621.77436501">
+                                    <!--2016-02-16 05:33:41 +0000-->
+                                </date>
+                            </datePicker>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Yy-sX-ugU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2272" y="635"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="bHp-W6-sdb">

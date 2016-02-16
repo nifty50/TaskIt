@@ -39,7 +39,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         let thisTask = taskArray[indexPath.row]
         
-        var cell: TaskCell = tableView.dequeueReusableCellWithIdentifier("myCell") as! TaskCell
+        let cell: TaskCell = tableView.dequeueReusableCellWithIdentifier("myCell") as! TaskCell
         
         cell.taskLabel.text = thisTask.task
         cell.descriptionLabel.text = thisTask.subTask
