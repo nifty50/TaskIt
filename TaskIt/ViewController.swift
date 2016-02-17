@@ -27,6 +27,18 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         self.tableView.reloadData()
     }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+
+        taskArray = taskArray.sort{
+            (taskOne:TaskModel, taskTwo:TaskModel) -> Bool in
+            // comparison logic here
+            return taskOne.date.timeIntervalSince1970 < taskTwo.date.timeIntervalSince1970
+        }
+        
+        self.tableView.reloadData()
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -39,9 +51,17 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             let indexPath = self.tableView.indexPathForSelectedRow!
             let thisTask = taskArray[indexPath.row]
             detailVC.detailTaskModel = thisTask
+            detailVC.mainVC = self
+        } else if segue.identifier == "showTaskAdd" {
+            let addTaskVC: AddTaskViewController = segue.destinationViewController as! AddTaskViewController
+            addTaskVC.mainVC = self
         }
     }
 
+    @IBAction func addButtonTapped(sender: UIBarButtonItem) {
+        self.performSegueWithIdentifier("showTaskAdd", sender: self)
+    }
+    
     // UITableViewDataSource
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -67,5 +87,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         print(indexPath.row)
         performSegueWithIdentifier("showTaskDetail", sender: self)
     }
+    
 }
 
