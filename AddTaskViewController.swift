@@ -7,11 +7,10 @@
 //
 
 import UIKit
+import CoreData
 
 class AddTaskViewController: UIViewController {
     
-    var mainVC: ViewController!
-
     @IBOutlet weak var taskTextField: UITextField!
     @IBOutlet weak var subtaskTextField: UITextField!
     @IBOutlet weak var dueDatePicker: UIDatePicker!
@@ -43,8 +42,27 @@ class AddTaskViewController: UIViewController {
     }
     
     @IBAction func addTaskButtonTapped(sender: AnyObject) {
-        let task = TaskModel(task: taskTextField.text!, subTask: subtaskTextField.text!, date: dueDatePicker.date, completed: false)
-        mainVC.baseArray[0].append(task)
+        let appDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
+        let managedObjectContext = appDelegate.managedObjectContext
+        let entityDescription = NSEntityDescription.entityForName("TaskModel", inManagedObjectContext: managedObjectContext!)
+        let task = TaskModel(entity: entityDescription!, insertIntoManagedObjectContext: managedObjectContext)
+        task.task = taskTextField.text
+        task.subtask = subtaskTextField.text
+        task.date = dueDatePicker.date
+        task.completed = false
+        appDelegate.saveContext()
+        let request = NSFetchRequest(entityName: "TaskModel")
+        var results: NSArray? = nil
+        do {
+            try results = managedObjectContext!.executeFetchRequest(request)
+            for res in results! {
+                print(res)
+            }
+        } catch let error as NSError {
+            print(error.localizedDescription)
+            abort()
+        }
+
         self.dismissViewControllerAnimated(true, completion: nil)
     }
 }
