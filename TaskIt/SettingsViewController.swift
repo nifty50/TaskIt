@@ -21,6 +21,8 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
 
         // Do any additional setup after loading the view.
         
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "Background")!)
+        
         self.capitalizeTableView.delegate = self
         self.capitalizeTableView.dataSource = self
         self.capitalizeTableView.scrollEnabled = false
@@ -120,52 +122,5 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
         NSUserDefaults.standardUserDefaults().synchronize()
         tableView.reloadData()
     }
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
 }
